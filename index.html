@@ -1,107 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ian</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=EB+Garamond:wght@400&family=New+Rocker&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-margin:0;
-background:#0b0b0b;
-color:white;
-font-family:Georgia, serif;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-text-align:center;
+    background:black;
+    overflow:hidden;
+    font-family:'EB Garamond', serif;
 }
 
-.container{
-max-width:500px;
-padding:30px;
+.hero{
+
+    position:relative;
+    width:100vw;
+    height:100vh;
+
 }
 
-img{
-width:70%;
-max-width:320px;
-border-radius:10px;
-margin-bottom:30px;
+.hero img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.95) 0%,
+        rgba(0,0,0,0.75) 30%,
+        rgba(0,0,0,0.2) 60%,
+        rgba(0,0,0,0) 100%
+    );
+
+}
+
+.content{
+
+    position:absolute;
+    bottom:45px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+    max-width:420px;
+
+    text-align:center;
+
+    color:white;
+
 }
 
 h1{
-    font-size:2.4rem;
-    margin-bottom:10px;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:3.2rem;
+    margin-bottom:5px;
+
 }
 
 h2{
-    margin-top:-12px;
-    margin-bottom:25px;
-    font-weight:400;
-    font-size:1.2rem;
-    color:#c8c8c8;
-    font-style:italic;
-}
 
-button{
-...
+    font-family:'New Rocker', cursive;
+    color:#b8b8b8;
+    font-size:1.35rem;
+    font-weight:normal;
+
+    margin-bottom:24px;
+
 }
 
 p{
-font-size:1.1rem;
-opacity:.9;
-line-height:1.6;
+
+    line-height:1.6;
+    font-size:1.08rem;
+    margin-bottom:16px;
+
+}
+
+.note{
+
+    color:#cccccc;
+    margin-bottom:28px;
+
 }
 
 button{
 
-margin-top:30px;
+    background:#651521;
 
-padding:16px 28px;
+    color:white;
 
-border:none;
+    border:2px solid #8f2433;
 
-border-radius:40px;
+    padding:16px 32px;
 
-background:#7b1220;
+    border-radius:40px;
 
-color:white;
+    font-size:1rem;
 
-font-size:1.1rem;
+    cursor:pointer;
 
-cursor:pointer;
+    font-family:inherit;
+
+    transition:.3s;
+
+    box-shadow:0 0 20px rgba(0,0,0,.45);
 
 }
 
 button:hover{
 
-background:#962135;
+    background:#7b1c2a;
+
+    transform:scale(1.04);
 
 }
 
 </style>
 
-
 </head>
 
 <body>
 
-<div class="container">
+<div class="hero">
 
 <img src="images/portrait.PNG" alt="Ian">
+
+<div class="overlay"></div>
+
+<div class="content">
+
 <h1>Ian</h1>
+
 <h2>"The Maschine" Gregory Smith</h2>
 
-<p>A quiet place to spend some time with Ian.</p>
+<p>
+A quiet place to spend some time with Ian.
+</p>
 
-<p>🔊 Turn your volume up first.</p>
+<p class="note">
+🔊 Best experienced with your volume up.
+</p>
 
-<button>❤️ Spend some time with Ian</button>
+<button>
+❤️ Spend some time with Ian
+</button>
+
+</div>
 
 </div>
 
 </body>
-
 </html>
