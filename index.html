@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -10,134 +11,133 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=EB+Garamond:wght@400&family=New+Rocker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:black;
-    overflow:hidden;
-    font-family:'EB Garamond', serif;
-}
 
-.hero{
-
-    position:relative;
-    width:100vw;
-    height:100vh;
+background:#ffffff;
+font-family:'New Rocker', cursive;
 
 }
 
-.hero img{
+.container{
 
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center top;
+min-height:100vh;
 
-}
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:center;
 
-.overlay{
+text-align:center;
 
-    position:absolute;
-    inset:0;
-
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,0.95) 0%,
-        rgba(0,0,0,0.75) 30%,
-        rgba(0,0,0,0.2) 60%,
-        rgba(0,0,0,0) 100%
-    );
+padding:30px 25px 50px;
 
 }
 
-.content{
+img{
 
-    position:absolute;
-    bottom:45px;
-    left:50%;
+width:82%;
+max-width:360px;
 
-    transform:translateX(-50%);
+display:block;
 
-    width:90%;
-    max-width:420px;
-
-    text-align:center;
-
-    color:white;
+margin:0 auto;
 
 }
 
 h1{
 
-    font-family:'Cormorant Garamond', serif;
-    font-size:3.2rem;
-    margin-bottom:5px;
+font-size:4rem;
+font-weight:normal;
+
+color:#111;
+
+margin-top:-15px;
+margin-bottom:12px;
 
 }
 
 h2{
 
-    font-family:'New Rocker', cursive;
-    color:#b8b8b8;
-    font-size:1.35rem;
-    font-weight:normal;
+font-size:1.7rem;
+font-weight:normal;
 
-    margin-bottom:24px;
+color:#111;
 
-}
+margin-bottom:55px;
 
-p{
-
-    line-height:1.6;
-    font-size:1.08rem;
-    margin-bottom:16px;
+line-height:1.4;
 
 }
 
-.note{
+.volume{
 
-    color:#cccccc;
-    margin-bottom:28px;
+font-size:1.7rem;
+
+margin-bottom:45px;
+
+color:#111;
 
 }
 
 button{
 
-    background:#651521;
+font-family:'New Rocker', cursive;
 
-    color:white;
+font-size:1.6rem;
 
-    border:2px solid #8f2433;
+padding:20px 36px;
 
-    padding:16px 32px;
+background:#661321;
 
-    border-radius:40px;
+color:white;
 
-    font-size:1rem;
+border:4px solid #4a0d16;
 
-    cursor:pointer;
+border-radius:18px;
 
-    font-family:inherit;
+cursor:pointer;
 
-    transition:.3s;
+box-shadow:
+0 8px 25px rgba(0,0,0,.18);
 
-    box-shadow:0 0 20px rgba(0,0,0,.45);
+transition:.3s;
 
 }
 
 button:hover{
 
-    background:#7b1c2a;
+transform:scale(1.03);
 
-    transform:scale(1.04);
+background:#7b1c2a;
+
+}
+
+.fade{
+
+margin-top:-70px;
+
+width:100%;
+height:130px;
+
+background:linear-gradient(
+
+to bottom,
+
+rgba(255,255,255,0),
+
+rgba(255,255,255,1)
+
+);
 
 }
 
@@ -147,33 +147,30 @@ button:hover{
 
 <body>
 
-<div class="hero">
+<div class="container">
 
 <img src="images/portrait.PNG" alt="Ian">
 
-<div class="overlay"></div>
-
-<div class="content">
+<div class="fade"></div>
 
 <h1>Ian</h1>
 
 <h2>"The Maschine" Gregory Smith</h2>
 
-<p>
-A quiet place to spend some time with Ian.
-</p>
+<div class="volume">
 
-<p class="note">
-🔊 Best experienced with your volume up.
-</p>
+Turn up your Volume!
+
+</div>
 
 <button>
-❤️ Spend some time with Ian
+
+Spend some time with Ian
+
 </button>
 
 </div>
 
-</div>
-
 </body>
+
 </html>
