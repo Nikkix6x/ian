@@ -23,18 +23,19 @@
 
 body{
 
-    background:#111;
-    color:white;
+    margin:0;
 
-    font-family:'New Rocker', cursive;
+    background:#000;
 
     display:flex;
-    flex-direction:column;
+    justify-content:center;
     align-items:center;
 
-    min-height:100vh;
+    height:100vh;
 
-    animation:fadeIn .7s ease;
+    overflow:hidden;
+
+    animation:fadeIn .8s ease;
 
 }
 
@@ -64,12 +65,15 @@ h1{
 
 .jacket{
 
-    width:95%;
-    max-width:650px;
+    width:100%;
+    max-width:700px;
+
+    height:auto;
 
     display:block;
 
-    margin:auto;
+    -webkit-mask-image:radial-gradient(circle, black 62%, transparent 92%);
+    mask-image:radial-gradient(circle, black 62%, transparent 92%);
 
 }
 
@@ -87,21 +91,7 @@ footer{
 
 <body>
 
-<h1>
-
-Grab a drink.<br>
-Tap a patch.<br>
-Spend some time with Ian.
-
-</h1>
-
 <img class="jacket" src="images2/battle-jacket.jpg" alt="Ian's Battle Jacket">
-
-<footer>
-
-See ya later, Babe!
-
-</footer>
 
 </body>
 
