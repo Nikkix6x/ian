@@ -34,6 +34,8 @@ body{
     color:#111;
     overflow:hidden;
 
+    transition:opacity .6s ease;
+
 }
 
 .container{
@@ -190,6 +192,24 @@ Turn up your Volume!
 </button>
 
 </div>
+
+<script>
+
+const button = document.getElementById("startButton");
+
+button.addEventListener("click", function(){
+
+    document.body.style.opacity = "0";
+
+    setTimeout(function(){
+
+        window.location.href = "intro.html";
+
+    },600);
+
+});
+
+</script>
 
 </body>
 
