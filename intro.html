@@ -25,6 +25,8 @@ body{
     background:#000;
     color:white;
 
+    transition:opacity .7s ease;
+
     font-family:'New Rocker', cursive;
 
     display:flex;
@@ -88,6 +90,21 @@ Spend some time with Ian.
 </p>
 
 </div>
+<script>
+
+setTimeout(function(){
+
+    document.body.style.opacity = "0";
+
+},3500);
+
+setTimeout(function(){
+
+    window.location.href="jacket.html";
+
+},4200);
+
+</script>
 
 </body>
 
