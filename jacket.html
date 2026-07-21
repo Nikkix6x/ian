@@ -124,6 +124,8 @@ h1{
 
 <body>
 
+<<body>
+
 <div class="jacket-container">
 
     <img class="jacket" src="images2/battle-jacket.jpg" alt="Ian's Battle Jacket">
@@ -134,20 +136,30 @@ h1{
 
 <script>
 
-const jacket = document.querySelector(".jacket-container");
+const video = document.createElement("video");
 
-jacket.addEventListener("click", function(event){
+video.src = "video/destroyer.mp4";
 
-    const rect = jacket.getBoundingClientRect();
+video.controls = true;
 
-    const x = ((event.clientX - rect.left) / rect.width * 100).toFixed(2);
-    const y = ((event.clientY - rect.top) / rect.height * 100).toFixed(2);
+video.style.position = "fixed";
+video.style.top = "50%";
+video.style.left = "50%";
+video.style.transform = "translate(-50%, -50%)";
+video.style.maxWidth = "90%";
+video.style.maxHeight = "90%";
+video.style.zIndex = "1000";
+video.style.background = "black";
 
-       console.log("X:", x + "%", "Y:", y + "%");
+document.getElementById("destroyerPatch").addEventListener("click", function(){
+
+    document.body.appendChild(video);
+
+    video.currentTime = 0;
+
+    video.play();
 
 });
-
-</script>
 
 </script>
 
