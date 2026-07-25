@@ -136,28 +136,13 @@ h1{
 
 <script>
 
-const video = document.createElement("video");
-
-video.src = "video/destroyer.mp4";
-
-video.controls = true;
-
-video.style.position = "fixed";
-video.style.top = "50%";
-video.style.left = "50%";
-video.style.transform = "translate(-50%, -50%)";
-video.style.maxWidth = "90%";
-video.style.maxHeight = "90%";
-video.style.zIndex = "1000";
-video.style.background = "black";
+const destroyerAudio = new Audio("Audio/destroyer.m4a");
 
 document.getElementById("destroyerPatch").addEventListener("click", function(){
 
-    document.body.appendChild(video);
+    destroyerAudio.currentTime = 0;
 
-    video.currentTime = 0;
-
-    video.play();
+    destroyerAudio.play();
 
 });
 
