@@ -146,6 +146,18 @@ document.getElementById("destroyerPatch").addEventListener("click", function(){
 
 });
 
+document.querySelector(".jacket").addEventListener("click", function(e){
+
+    const rect = this.getBoundingClientRect();
+
+    const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(2);
+    const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(2);
+
+    console.log(`X:${x}%  Y:${y}%`);
+
+});
+
+
 </script>
 
 </body>
