@@ -118,19 +118,34 @@ h1{
 
 }
 
+#midnightPatch{
+
+    left:51.03%;
+
+    top:70.10%;
+
+    width:12%;
+
+    height:8%;
+
+    transform:translate(-50%, -50%);
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<<body>
+<body>
 
 <div class="jacket-container">
 
     <img class="jacket" src="images2/battle-jacket.jpg" alt="Ian's Battle Jacket">
 
     <button id="destroyerPatch" class="patch"></button>
+    <button id="midnightPatch" class="patch"></button>
 
 </div>
 
@@ -157,6 +172,15 @@ document.querySelector(".jacket").addEventListener("click", function(e){
 
 });
 
+const midnightAudio = new Audio("Audio/keep_it_up_babe_200_203.m4a");
+
+document.getElementById("midnightPatch").addEventListener("click", function(){
+
+    midnightAudio.currentTime = 0;
+
+    midnightAudio.play();
+
+});
 
 </script>
 
