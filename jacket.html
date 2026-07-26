@@ -146,6 +146,20 @@ h1{
 
 }
 
+#eaglePatch{
+
+    left:80.08%;
+
+    top:54.59%;
+
+    width:28%;
+
+    height:17%;
+
+    transform:translate(-50%, -50%);
+
+}
+
 </style>
 
 </head>
@@ -159,6 +173,7 @@ h1{
     <button id="destroyerPatch" class="patch"></button>
     <button id="midnightPatch" class="patch"></button>
     <button id="dissectionPatch" class="patch"></button>
+    <button id="eaglePatch" class="patch"></button>
 
 </div>
 
@@ -203,6 +218,16 @@ document.getElementById("dissectionPatch").addEventListener("click", function(){
     dissectionAudio.currentTime = 0;
 
     dissectionAudio.play();
+
+});
+
+const eagleAudio = new Audio("Audio/ian_i_love_you_from_2m04.m4a");
+
+document.getElementById("eaglePatch").addEventListener("click", function(){
+
+    eagleAudio.currentTime = 0;
+
+    eagleAudio.play();
 
 });
 
