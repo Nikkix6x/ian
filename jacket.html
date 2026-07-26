@@ -132,11 +132,23 @@ h1{
 
 }
 
+#dissectionPatch{
+
+    left:15.53%;
+
+    top:51.49%;
+
+    width:28%;
+
+    height:17%;
+
+    transform:translate(-50%, -50%);
+
+}
+
 </style>
 
 </head>
-
-<body>
 
 <body>
 
@@ -146,10 +158,12 @@ h1{
 
     <button id="destroyerPatch" class="patch"></button>
     <button id="midnightPatch" class="patch"></button>
+    <button id="dissectionPatch" class="patch"></button>
 
 </div>
 
 <script>
+
 
 const destroyerAudio = new Audio("Audio/destroyer.m4a");
 
@@ -179,6 +193,16 @@ document.getElementById("midnightPatch").addEventListener("click", function(){
     midnightAudio.currentTime = 0;
 
     midnightAudio.play();
+
+
+   const dissectionAudio = new Audio("Audio/ian_hates_the_boots_7_12.m4a");
+
+document.getElementById("dissectionPatch").addEventListener("click", function(){
+
+    dissectionAudio.currentTime = 0;
+
+    dissectionAudio.play();
+
 
 });
 
